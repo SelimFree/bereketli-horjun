@@ -56,6 +56,9 @@ logs
 \*.sln
 \*.sw?
 
+# Wrangler
+.wrangler/
+
 # VS Code specific (ignores local workspace settings but keeps shared config files if you add them later)
 
 .vscode/\*

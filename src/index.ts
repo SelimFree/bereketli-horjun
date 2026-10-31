@@ -20,9 +20,19 @@ interface InquiryPayload {
   user_lang: string;
 }
 
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Methods": "POST, OPTIONS",
+  "Access-Control-Allow-Headers": "Content-Type",
+};
+
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
+
+    if (request.method === "OPTIONS") {
+      return new Response(null, { headers: corsHeaders });
+    }
 
     if (url.pathname === "/api/send" && request.method === "POST") {
       try {
@@ -84,6 +94,7 @@ export default {
         if (ownerRes.ok && autoReplyRes.ok) {
           return new Response(JSON.stringify({ success: true }), {
             status: 200,
+            headers: { "Content-Type": "application/json", ...corsHeaders },
           });
         } else {
           const ownerErr = !ownerRes.ok ? await ownerRes.text() : "OK";
@@ -100,11 +111,12 @@ export default {
       } catch (error: unknown) {
         const errorMessage =
           error instanceof Error ? error.message : "Server error";
+
         return new Response(
           JSON.stringify({ success: false, error: errorMessage }),
           {
             status: 500,
-            headers: { "Content-Type": "application/json" },
+            headers: { "Content-Type": "application/json", ...corsHeaders },
           },
         );
       }

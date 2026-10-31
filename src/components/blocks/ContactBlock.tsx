@@ -116,7 +116,7 @@ export function ContactBlock() {
                                     </div>
                                     <div className="flex flex-col mt-1">
                                         <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-gray-400 mb-1">{t("ContactBlock.info.emailLabel")}</span>
-                                        <a href={`mailto:${t("ContactBlock.info.email")}`} className="text-gray-900 font-black uppercase tracking-widest text-sm hover:text-primary-500 transition-colors">
+                                        <a href={`mailto:${t("ContactBlock.info.email")}`} className="text-gray-900 font-black tracking-widest text-sm hover:text-primary-500 transition-colors">
                                             {t("ContactBlock.info.email")}
                                         </a>
                                     </div>

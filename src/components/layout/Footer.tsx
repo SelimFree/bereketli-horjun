@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { ArrowRight, MapPin, Phone, Mail } from "lucide-react";
 import { cn } from "../../lib/utils";
 import { Text } from "../ui/Text";
-import { Button } from "../ui/Button";
 import { Image } from "../ui/Image";
 import type { NavLinkItem } from "./Layout";
 import { useTranslation } from "react-i18next";
@@ -53,10 +52,10 @@ export const Footer = forwardRef<HTMLElement, FooterProps>(
               <Text className="max-w-sm text-sm font-medium text-gray-400">
                 {t("footer.ctaDesc")}
               </Text>
-              <Button className="group flex shrink-0 items-center gap-3 bg-primary-500 px-8 py-6 text-sm font-bold text-white uppercase hover:bg-primary-600 transition-colors rounded-none">
+              <Link to="/contact" className="h-12 group flex shrink-0 items-center gap-3 bg-primary-500 px-8 py-6 text-sm font-bold text-white uppercase hover:bg-primary-600 transition-colors rounded-none">
                 {t("footer.ctaButton")}
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </Button>
+              </Link>
             </div>
           </div>
         </div>
