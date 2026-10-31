@@ -28,11 +28,11 @@ interface AutoReplyTranslation {
 
 export const autoReplyTranslations: Record<string, AutoReplyTranslation> = {
   en: {
-    subject: "Transmission Logged - Bereketli Horjun",
+    subject: "Request Received - Bereketli Horjun",
     title: "Data Received",
     greeting: "Attention:",
     body1:
-      "Your operational parameters have been securely logged by the Bereketli Horjun network.",
+      "Your operational parameters have been securely loged by the Bereketli Horjun team.",
     body2:
       "Our engineering and logistics divisions will review your requirements. You can expect direct communication from an authorized representative within standard 24-hour cycles.",
     regards: "Global Dispatch",
@@ -117,38 +117,38 @@ export const getAutoReplyHtml = (firstName: string, lang: string = "en") => {
 <!DOCTYPE html>
 <html>
 <head><meta charset="UTF-8"></head>
-<body style="margin: 0; padding: 0; background-color: #030712; font-family: Arial, Helvetica, sans-serif;">
-  <div style="max-width: 600px; margin: 40px auto; background-color: #111827; border: 1px solid #374151;">
+<body style="margin: 0; padding: 0; background-color: #f3f4f6; font-family: Arial, Helvetica, sans-serif;">
+  <div style="max-width: 600px; margin: 40px auto; background-color: #ffffff; border: 1px solid #e5e7eb;">
     
     <!-- Header with Logo -->
-    <div style="padding: 32px 40px; border-bottom: 1px solid #374151; text-align: left;">
+    <div style="padding: 32px 40px; border-bottom: 1px solid #e5e7eb; text-align: left; background-color: #ffffff;">
       <img src="${LOGO_URL}" alt="${COMPANY_NAME}" style="display: block; max-width: 140px; height: auto; border: none; outline: none;" />
     </div>
 
     <!-- Body -->
-    <div style="padding: 40px; border-bottom: 1px solid #374151;">
-      <h2 style="margin: 0 0 24px 0; color: #f9fafb; font-size: 18px; font-weight: black; text-transform: uppercase; letter-spacing: 1px;">
+    <div style="padding: 40px; border-bottom: 1px solid #e5e7eb;">
+      <h2 style="margin: 0 0 24px 0; color: #111827; font-size: 18px; font-weight: black; text-transform: uppercase; letter-spacing: 1px;">
         ${t.title}
       </h2>
       
-      <p style="margin: 0 0 16px 0; color: #f97316; font-size: 10px; font-weight: bold; text-transform: uppercase; letter-spacing: 2px;">
+      <p style="margin: 0 0 16px 0; color: #ea580c; font-size: 10px; font-weight: bold; text-transform: uppercase; letter-spacing: 2px;">
         ${t.greeting} ${firstName}
       </p>
       
-      <p style="margin: 0 0 16px 0; color: #d1d5db; font-size: 14px; line-height: 1.7;">
+      <p style="margin: 0 0 16px 0; color: #4b5563; font-size: 14px; line-height: 1.7;">
         ${t.body1}
       </p>
-      <p style="margin: 0 0 32px 0; color: #d1d5db; font-size: 14px; line-height: 1.7;">
+      <p style="margin: 0 0 32px 0; color: #4b5563; font-size: 14px; line-height: 1.7;">
         ${t.body2}
       </p>
       
-      <p style="margin: 0; color: #9ca3af; font-size: 10px; font-weight: bold; line-height: 1.6; text-transform: uppercase; letter-spacing: 2px;">
+      <p style="margin: 0; color: #6b7280; font-size: 10px; font-weight: bold; line-height: 1.6; text-transform: uppercase; letter-spacing: 2px;">
         ${t.regards}<br/>
-        <strong style="color: #f9fafb;">${COMPANY_NAME}</strong>
+        <strong style="color: #111827;">${COMPANY_NAME}</strong>
       </p>
     </div>
 
-    <div style="padding: 40px;">
+    <div style="padding: 40px; background-color: #f9fafb;">
       
       <!-- Top Info -->
       <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 32px;">
@@ -156,7 +156,7 @@ export const getAutoReplyHtml = (firstName: string, lang: string = "en") => {
           <td valign="top">
             <p style="margin: 0 0 12px 0; font-size: 10px; font-weight: bold; color: #9ca3af; text-transform: uppercase; letter-spacing: 2px;">${t.contactTitle}</p>
             <p style="margin: 0; font-size: 12px; font-weight: bold;">
-              <a href="mailto:${CONTACT_EMAIL}" style="color: #f9fafb; text-decoration: none;">${CONTACT_EMAIL}</a>
+              <a href="mailto:${CONTACT_EMAIL}" style="color: #111827; text-decoration: none;">${CONTACT_EMAIL}</a>
             </p>
           </td>
         </tr>
@@ -167,21 +167,21 @@ export const getAutoReplyHtml = (firstName: string, lang: string = "en") => {
         <tr>
           <td valign="top" width="50%">
             <p style="margin: 0 0 16px 0; font-size: 10px; font-weight: bold; color: #9ca3af; text-transform: uppercase; letter-spacing: 2px;">${t.linksTitle}</p>
-            <a href="${WEBSITE_URL}/about" style="display: block; color: #d1d5db; text-decoration: none; font-size: 12px; margin-bottom: 12px; font-weight: bold;">${t.links.about}</a>
-            <a href="${WEBSITE_URL}/services" style="display: block; color: #d1d5db; text-decoration: none; font-size: 12px; margin-bottom: 12px; font-weight: bold;">${t.links.products}</a>
-            <a href="${WEBSITE_URL}/contact" style="display: block; color: #d1d5db; text-decoration: none; font-size: 12px; margin-bottom: 12px; font-weight: bold;">${t.links.contact}</a>
+            <a href="${WEBSITE_URL}/about" style="display: block; color: #4b5563; text-decoration: none; font-size: 12px; margin-bottom: 12px; font-weight: bold;">${t.links.about}</a>
+            <a href="${WEBSITE_URL}/services" style="display: block; color: #4b5563; text-decoration: none; font-size: 12px; margin-bottom: 12px; font-weight: bold;">${t.links.products}</a>
+            <a href="${WEBSITE_URL}/contact" style="display: block; color: #4b5563; text-decoration: none; font-size: 12px; margin-bottom: 12px; font-weight: bold;">${t.links.contact}</a>
           </td>
           <td valign="top" width="50%">
             <p style="margin: 0 0 16px 0; font-size: 10px; font-weight: bold; color: #9ca3af; text-transform: uppercase; letter-spacing: 2px;">${t.legalTitle}</p>
-            <a href="${WEBSITE_URL}/privacy" style="display: block; color: #d1d5db; text-decoration: none; font-size: 12px; margin-bottom: 12px; font-weight: bold;">${t.legal.privacy}</a>
-            <a href="${WEBSITE_URL}/terms" style="display: block; color: #d1d5db; text-decoration: none; font-size: 12px; margin-bottom: 12px; font-weight: bold;">${t.legal.terms}</a>
-            <a href="${WEBSITE_URL}/cookies" style="display: block; color: #d1d5db; text-decoration: none; font-size: 12px; margin-bottom: 12px; font-weight: bold;">${t.legal.cookie}</a>
+            <a href="${WEBSITE_URL}/privacy" style="display: block; color: #4b5563; text-decoration: none; font-size: 12px; margin-bottom: 12px; font-weight: bold;">${t.legal.privacy}</a>
+            <a href="${WEBSITE_URL}/terms" style="display: block; color: #4b5563; text-decoration: none; font-size: 12px; margin-bottom: 12px; font-weight: bold;">${t.legal.terms}</a>
+            <a href="${WEBSITE_URL}/cookies" style="display: block; color: #4b5563; text-decoration: none; font-size: 12px; margin-bottom: 12px; font-weight: bold;">${t.legal.cookie}</a>
           </td>
         </tr>
       </table>
 
       <!-- Copyright -->
-      <div style="margin-top: 32px; border-top: 1px solid #374151; padding-top: 24px; text-align: left;">
+      <div style="margin-top: 32px; border-top: 1px solid #e5e7eb; padding-top: 24px; text-align: left;">
         <p style="margin: 0; color: #9ca3af; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; font-weight: bold;">
           &copy; ${currentYear} ${COMPANY_NAME}. ${t.rightsReserved}
         </p>
