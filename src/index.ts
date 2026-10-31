@@ -61,7 +61,7 @@ export default {
           method: "POST",
           headers: resendHeaders,
           body: JSON.stringify({
-            from: `<${env.RESEND_OWNER_EMAIL}>`,
+            from: `${env.RESEND_OWNER_EMAIL}`,
             to: [env.RESEND_OWNER_EMAIL],
             reply_to: email,
             subject: `Запрос: ${company} (${department})`,
