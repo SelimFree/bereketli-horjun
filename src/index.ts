@@ -29,6 +29,12 @@ export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
 
+    console.log("Token debug:", {
+      startsWithRe: env.RESEND_API_KEY?.startsWith("re_"),
+      length: env.RESEND_API_KEY?.length,
+      lastCharIsSpace: env.RESEND_API_KEY?.endsWith(" ")
+    });
+
     if (request.method === "OPTIONS") {
       return new Response(null, { headers: corsHeaders });
     }
