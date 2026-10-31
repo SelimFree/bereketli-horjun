@@ -7,8 +7,6 @@
   },
   "assets": {
     "not_found_handling": "single-page-application",
-    "directory": "./dist",
-    "binding": "ASSETS"
   },
   "compatibility_flags": [
     "nodejs_compat"
