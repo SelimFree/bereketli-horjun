@@ -54,7 +54,7 @@ export function ManifestoBlock() {
           
           <div className="absolute bottom-0 right-0 bg-gray-900 p-4 z-20">
              <Text className="text-[10px] font-bold tracking-[0.2em] text-white uppercase">
-                Fig 1.1 / Structural
+                Bereketli Horjun
              </Text>
           </div>
 
