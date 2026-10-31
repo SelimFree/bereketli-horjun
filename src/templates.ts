@@ -57,7 +57,6 @@ export const getOwnerEmailHtml = (
   fullName: string,
   company: string,
   email: string,
-  department: string,
   message: string,
 ) => `
 <!DOCTYPE html>
@@ -93,10 +92,6 @@ export const getOwnerEmailHtml = (
             <p style="margin: 8px 0 0 0; font-size: 14px;">
               <a href="mailto:${email}" style="color: #f97316; text-decoration: none; font-weight: bold;">${email}</a>
             </p>
-          </td>
-          <td width="50%" style="padding: 20px; border: 1px solid #374151; background-color: #1f2937;">
-            <p style="margin: 0; font-size: 10px; font-weight: bold; color: #9ca3af; text-transform: uppercase; letter-spacing: 2px;">Целевой сектор</p>
-            <p style="margin: 8px 0 0 0; font-size: 14px; color: #f9fafb; text-transform: uppercase; font-weight: bold;">${department || "Общий"}</p>
           </td>
         </tr>
       </table>

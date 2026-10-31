@@ -15,7 +15,6 @@ interface InquiryPayload {
   lastName: string;
   company: string;
   email: string;
-  department: string;
   message: string;
   user_lang: string;
 }
@@ -42,7 +41,6 @@ export default {
           lastName,
           company,
           email,
-          department,
           message,
           user_lang,
         } = body;
@@ -64,12 +62,11 @@ export default {
             from: `${env.RESEND_OWNER_EMAIL}`,
             to: [env.RESEND_OWNER_EMAIL],
             reply_to: email,
-            subject: `Запрос: ${company} (${department})`,
+            subject: `Новый Запрос`,
             html: getOwnerEmailHtml(
               fullName,
               company,
               email,
-              department,
               message,
             ),
           }),
