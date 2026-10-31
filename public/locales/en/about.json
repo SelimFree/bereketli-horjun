@@ -1,0 +1,65 @@
+{
+  "hero": {
+    "tag1": "SAFETY",
+    "tag2": "EFFICIENCY",
+    "tag3": "SATISFACTION",
+    "titleStart": "ABOUT",
+    "titleAccent": "BEREKETLI HORJUN",
+    "description": "We are a company with a long history of providing comprehensive services, committed to safety, efficiency, and customer satisfaction."
+  },
+
+  "ManifestoBlock": {
+    "subtitle": "Company Mission",
+    "title1": "Exceeding",
+    "title2": "Expectations.",
+    "description": "Our mission is to deliver high-quality solutions in construction, engineering, FIBC production, petrochemicals trading, industrial equipment rentals and logistics. Our team of experienced professionals is dedicated to exceeding expectations and we have a proven track record of successful projects."
+  },
+
+  "TimelineBlock": {
+    "subtitle": "Service Evolution",
+    "title1": "Strategic",
+    "title2": "Expansion",
+    "items": [
+      {
+        "year": "Phase 1",
+        "title": "Industrial Construction",
+        "desc": "Delivering tailored, high-quality solutions across factories, warehouses, and infrastructure projects to optimize operational efficiency and reliability."
+      },
+      {
+        "year": "Phase 2",
+        "title": "Engineering & Modernization",
+        "desc": "Modernizing facilities through advanced technology and optimized processes, delivering tailored engineering design and consulting services."
+      },
+      {
+        "year": "Phase 3",
+        "title": "Production & Petrochemicals",
+        "desc": "Manufacturing FIBC big bags up to 1200 kg and conducting global petrochemicals trading for fuels, polymers, plastics, and fertilizers."
+      },
+      {
+        "year": "Phase 4",
+        "title": "Global Supply Chain",
+        "desc": "Expanding our logistics network across the globe with rail, pipeline, road freight, and maritime logistics via strategic port partnerships."
+      }
+    ]
+  },
+
+  "CertificatesBlock": {
+    "subtitle": "Technical Registry",
+    "title1": "Standards &",
+    "title2": "Recognition",
+    "items": [
+      {
+        "title": "Industry Recognition",
+        "scope": "We have a proven track record of successful projects and have received industry recognition for our achievements."
+      },
+      {
+        "title": "International Quality & Safety",
+        "scope": "Meeting rigorous international quality and safety standards, strictly adhered to in areas like specialized aviation fuels procurement."
+      },
+      {
+        "title": "Operational Commitment",
+        "scope": "Deeply committed to safety, efficiency, and customer satisfaction across all our industrial operations and service deliveries."
+      }
+    ]
+  }
+}

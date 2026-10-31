@@ -1,0 +1,72 @@
+{
+  "hero": {
+    "tag1": "INDUSTRY",
+    "tag2": "PEOPLE",
+    "tag3": "PROGRESS",
+    "titleStart": "INTEGRATED INDUSTRIAL",
+    "titleAccent": "SERVICES",
+    "description": "Comprehensive solutions across the industrial value chain — from construction and engineering to trading, production, logistics, and equipment rental."
+  },
+  "ServicesListBlock": {
+    "construction": {
+      "title": "Construction",
+      "description": "Leverage our industrial facility construction expertise. We deliver tailored, high-quality solutions across factories, warehouses, and infrastructure projects to optimize operational efficiency and reliability.",
+      "specs": {
+        "1": { "label": "Facility Types", "value": "Factories & Workshops" },
+        "2": { "label": "Storage Solutions", "value": "Industrial Warehouses" },
+        "3": { "label": "Aviation & Large Scale", "value": "Hangars" },
+        "4": { "label": "Core Objective", "value": "Operational Efficiency" }
+      }
+    },
+    "engineering": {
+      "title": "Engineering",
+      "description": "We modernize facilities through advanced technology and optimized processes, delivering tailored engineering design and consulting services to boost productivity, safety, and sustainability.",
+      "specs": {
+        "1": { "label": "Core Expertise", "value": "Engineering Design" },
+        "2": { "label": "Facility Upgrades", "value": "Plant Modernization" },
+        "3": { "label": "Strategic Advisory", "value": "Engineering Consulting" },
+        "4": { "label": "Focus Areas", "value": "Safety & Sustainability" }
+      }
+    },
+    "fibc_production": {
+      "title": "FIBC Production",
+      "description": "Manufacturing of high-quality PP fabric packaging solutions, including standard 50 kg bags and heavy-duty big bags designed for industrial bulk material handling.",
+      "specs": {
+        "1": { "label": "Base Material", "value": "PP Fabric" },
+        "2": { "label": "Standard Load", "value": "50 KG Bags" },
+        "3": { "label": "Heavy Load Capacity", "value": "Big Bags up to 1200 KG" },
+        "4": { "label": "Application", "value": "Industrial Bulk Packaging" }
+      }
+    },
+    "petrochemicals": {
+      "title": "Petrochemicals Trading",
+      "description": "Reliable global distribution of high-demand refined petroleum products, specialized aviation fuels, polymers, plastics, and industrial fertilizers.",
+      "specs": {
+        "1": { "label": "Refined Petroleum", "value": "ULSD & Gasoil" },
+        "2": { "label": "Aviation Fuels", "value": "Jet Fuel (A1)" },
+        "3": { "label": "Polymers & Plastics", "value": "Polyethylene (PE) & Polypropylene (PP)" },
+        "4": { "label": "Fertilizers & Chemicals", "value": "Urea & Sulphur" }
+      }
+    },
+    "logistics": {
+      "title": "Logistics & Supply Chain",
+      "description": "Our logistics network spans the globe, delivering tailored rail, pipeline, road freight, and maritime solutions for secure, high-volume industrial transport.",
+      "specs": {
+        "1": { "label": "Rail & Pipeline", "value": "High-Volume Bulk Transport" },
+        "2": { "label": "Maritime Logistics", "value": "Tankers & Bulk Carriers" },
+        "3": { "label": "Road Freight", "value": "Agile Last-Mile Delivery" },
+        "4": { "label": "Network Scope", "value": "Global Distribution" }
+      }
+    },
+    "equipment_rental": {
+      "title": "Equipment Rental",
+      "description": "Access a diverse inventory of high-quality industrial equipment with flexible rental terms and comprehensive maintenance services for optimal performance.",
+      "specs": {
+        "1": { "label": "Earthmoving", "value": "Excavators & Bulldozers" },
+        "2": { "label": "Material Handling", "value": "Front Loaders & Forklifts" },
+        "3": { "label": "Heavy Transport", "value": "Dump Trucks" },
+        "4": { "label": "Support Vehicles", "value": "SUVs & Pick-up Trucks" }
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "HeroBlock": {
+    "tag1": "CONSTRUCTION",
+    "tag2": "ENGINEERING",
+    "tag3": "LOGISTICS",
+    "titleStart": "INTEGRATED",
+    "titleAccent": "SERVICES",
+    "description": "Our mission is to deliver high-quality solutions in construction, engineering, FIBC production, petrochemicals trading, industrial equipment rentals and logistics",
+    "cta": "OUR SERVICES"
+  },
+  "MetricsBlock": {
+    "years": "Years active",
+    "projects": "Projects completed",
+    "partners": "Global partners",
+    "fleet": "Active fleet"
+  },
+  "ServicesBlock": {
+    "subtitle": "Core Expertise",
+    "title1": "Industrial",
+    "title2": "Solutions",
+    "items": [
+      {
+        "title": "Construction",
+        "desc": "Tailored, high-quality solutions across factories, warehouses, and infrastructure projects to optimize operational efficiency and reliability."
+      },
+      {
+        "title": "Engineering",
+        "desc": "Plant modernization, engineering design, and expert consulting services to boost productivity, safety, and sustainability."
+      },
+      {
+        "title": "FIBC Production",
+        "desc": "Manufacturing of PP fabric for 50 kg bags and big bags up to 1200 kg."
+      },
+      {
+        "title": "Petrochemicals",
+        "desc": "Reliable distribution of refined petroleum products, polymers, plastics, aviation fuels, and fertilizers."
+      },
+      {
+        "title": "Logistics & Supply",
+        "desc": "Global rail, pipeline, road freight, and maritime logistics solutions ensuring your goods move efficiently."
+      },
+      {
+        "title": "Equipment Rental",
+        "desc": "Flexible rental terms for high-quality industrial equipment including front loaders, forklifts, dump trucks, and excavators."
+      }
+    ]
+  }
+}

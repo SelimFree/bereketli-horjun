@@ -1,0 +1,57 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookie": "Cookie Policy"
+  },
+
+  "footer": {
+    "ctaTag": "LET'S BUILD TOGETHER",
+    "ctaTitle": "READY TO DISCUSS YOUR NEXT PROJECT?",
+    "ctaDesc": "Partner with Bereketli Horjun for reliable, integrated solutions tailored to your industrial needs.",
+    "ctaButton": "GET IN TOUCH",
+    "slogan": "Building industrial progress through integrated solutions.",
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "services": "Our Services",
+    "servicesList": {
+      "construction": "Construction",
+      "engineering": "Engineering",
+      "fibc-production": "FIBC Production",
+      "petrochemicals": "Petrochemicals"
+    },
+    "address": "Ashgabat, Turkmenistan, Office 1, \"Senagatçy\" hotel, Archabil Ave 17",
+    "phone": "+993 12 345678",
+    "email": "info@bereketli-horjun.com",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookie": "Cookie Policy",
+    "rights": "© {{year}} {{company}}. All rights reserved."
+  },
+
+  "cookieBanner": {
+    "title": "Cookie Policy",
+    "body": "We use cookies to analyze traffic and optimize your experience. By clicking \"Accept\", you agree to our use of cookies.",
+    "accept": "Accept",
+    "more": "Learn More"
+  },
+
+  "notFoundPage": {
+    "title": "Page Not Found",
+    "subtitle": "Error 404",
+    "body": "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.",
+    "returnBtn": "Return to Homepage"
+  },
+
+  "errorPage": {
+    "title": "System Error",
+    "subtitle": "Error 500",
+    "body": "We are experiencing technical difficulties on our end. Please try refreshing the page or come back later.",
+    "refreshBtn": "Refresh Page"
+  }
+}

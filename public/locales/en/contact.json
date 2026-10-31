@@ -1,0 +1,43 @@
+{
+  "hero": {
+    "tag1": "INDUSTRY",
+    "tag2": "EXPERTISE",
+    "tag3": "PARTNERSHIP",
+    "titleStart": "GET IN",
+    "titleAccent": "TOUCH",
+    "description": "Let's discuss how Bereketli Horjun can support your next project. Our team is ready to provide comprehensive industrial solutions and a reliable partnership."
+  },
+  "ContactBlock": {
+    "subtitle": "Global Dispatch",
+    "title1": "Initiate",
+    "title2": "Connection",
+    "description": "Submit operational parameters or structural inquiries. Our engineering and logistics divisions respond to all communications to ensure optimal service delivery.",
+    "info": {
+      "addressLabel": "Headquarters",
+      "address": "Ashgabat, Turkmenistan",
+      "addressDetails": "Office 1, \"Senagatçy\" hotel, Archabil Ave 17",
+      "phoneLabel": "Company Number",
+      "phone": "+993 12 345678",
+      "emailLabel": "Secure Mail",
+      "email": "info@bereketli-horjun.com"
+    },
+    "form": {
+      "firstNameLabel": "First Name",
+      "firstNamePlaceholder": "e.g. John",
+      "lastNameLabel": "Last Name",
+      "lastNamePlaceholder": "e.g. Doe",
+      "companyLabel": "Corporate Entity",
+      "companyPlaceholder": "Organization Name",
+      "emailLabel": "Transmission Address",
+      "emailPlaceholder": "name@company.com",
+      "messageLabel": "Project Parameters",
+      "messagePlaceholder": "Detail your operational requirements..."
+    },
+    "buttonSubmit": "Transmit Data",
+    "buttonSending": "Encrypting...",
+    "errorMessage": "Transmission failed. Secure connection interrupted.",
+    "successTitle": "Data Received",
+    "successMessage": "Your operational parameters have been logged securely. Our team will initiate contact shortly.",
+    "successButton": "Initialize New Form"
+  }
+}
