@@ -7,6 +7,13 @@ import { Heading } from "../ui/Heading";
 import { Text } from "../ui/Text";
 import { Image } from "../ui/Image";
 
+import ConstructionImg from "../../assets/home/construction.png";
+import EngineeringImg from "../../assets/home/engineering.png";
+import FibcImg from "../../assets/home/fibc.png";
+import PetrochemicalsImg from "../../assets/home/petrochemicals.png";
+import LogisticsImg from "../../assets/home/logistics.png";
+import RentalImg from "../../assets/home/rental.png";
+
 export function ServicesBlock() {
     const { t } = useTranslation("home");
 
@@ -16,42 +23,42 @@ export function ServicesBlock() {
             title: t("ServicesBlock.items.0.title"),
             desc: t("ServicesBlock.items.0.desc"),
             link: "/services#01",
-            img: "https://images.unsplash.com/photo-1541888086225-f6404f4561a9?auto=format&fit=crop&q=80"
+            img: ConstructionImg
         },
         {
             id: "02",
             title: t("ServicesBlock.items.1.title"),
             desc: t("ServicesBlock.items.1.desc"),
             link: "/services#02",
-            img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80"
+            img: EngineeringImg
         },
         {
             id: "03",
             title: t("ServicesBlock.items.2.title"),
             desc: t("ServicesBlock.items.2.desc"),
             link: "/services#03",
-            img: "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&q=80"
+            img: FibcImg
         },
         {
             id: "04",
             title: t("ServicesBlock.items.3.title"),
             desc: t("ServicesBlock.items.3.desc"),
             link: "/services#04",
-            img: "https://images.unsplash.com/photo-1605270631627-2c9383685e13?auto=format&fit=crop&q=80"
+            img: PetrochemicalsImg
         },
         {
             id: "05",
             title: t("ServicesBlock.items.4.title"),
             desc: t("ServicesBlock.items.4.desc"),
             link: "/services#05",
-            img: "https://images.unsplash.com/photo-1586528116311-ad8ed7c50a27?auto=format&fit=crop&q=80"
+            img: LogisticsImg
         },
         {
             id: "06",
             title: t("ServicesBlock.items.5.title"),
             desc: t("ServicesBlock.items.5.desc"),
             link: "/services#06",
-            img: "https://images.unsplash.com/photo-1587293852726-70cdb56c28ea?auto=format&fit=crop&q=80"
+            img: RentalImg
         }
     ];
 
@@ -76,17 +83,17 @@ export function ServicesBlock() {
                     <Link
                         key={item.id}
                         to={item.link}
-                        className="group relative bg-white aspect-square md:aspect-auto md:min-h-88 p-8 md:p-10 flex flex-col justify-between overflow-hidden transition-colors duration-300 hover:bg-gray-900"
+                        className="group relative bg-gray-900 md:bg-white aspect-square md:aspect-auto md:min-h-88 p-8 md:p-10 flex flex-col justify-between overflow-hidden transition-colors duration-300 hover:bg-gray-900"
                     >
                         <Image
                             src={item.img}
                             alt=""
                             aspectRatio="auto"
-                            containerClassName="absolute inset-0 z-0 pointer-events-none !bg-transparent opacity-20 duration-500"
+                            containerClassName="absolute inset-0 z-0 pointer-events-none !bg-transparent opacity-50 duration-500"
                         />
 
                         <div className="relative z-10">
-                            <Text className="text-[10px] font-bold tracking-[0.3em] text-gray-400 group-hover:text-primary-500 transition-colors duration-300">
+                            <Text className="text-[10px] font-bold tracking-[0.3em] text-primary-500 md:text-gray-400 group-hover:text-primary-500 transition-colors duration-300">
                                 {item.id}
                             </Text>
                         </div>
@@ -94,13 +101,13 @@ export function ServicesBlock() {
                         <div className="relative z-10 mt-auto flex flex-col w-full">
                             <Heading
                                 level={3}
-                                className="text-xl md:text-2xl lg:text-3xl font-black uppercase tracking-tight text-gray-900 group-hover:text-white transition-colors duration-300 mb-4 truncate w-full"
+                                className="text-xl md:text-2xl lg:text-3xl font-black uppercase tracking-tight text-white md:text-gray-900 group-hover:text-white transition-colors duration-300 mb-4 truncate w-full"
                             >
                                 {item.title}
                             </Heading>
 
                             <div className="flex items-end justify-between overflow-hidden w-full gap-4">
-                                <Text className="text-xs md:text-sm text-gray-500 group-hover:text-gray-400 transition-colors duration-300 w-[85%] h-16 line-clamp-3 overflow-hidden">
+                                <Text className="text-xs md:text-sm text-gray-400 md:text-gray-800 group-hover:text-gray-400 transition-colors duration-300 w-[85%] h-16 line-clamp-4 overflow-hidden">
                                     {item.desc}
                                 </Text>
 

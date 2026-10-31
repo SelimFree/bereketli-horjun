@@ -45,7 +45,6 @@ export function TimelineBlock() {
 
             <div className="w-full max-w-[100rem] mx-auto relative z-10">
 
-                {/* Section Header */}
                 <FadeIn className="flex flex-col mb-20 md:mb-32">
                     <Text className="text-[10px] font-bold tracking-[0.4em] text-primary-500 uppercase mb-6">
                         {t("TimelineBlock.subtitle")}
@@ -59,10 +58,8 @@ export function TimelineBlock() {
                     </Heading>
                 </FadeIn>
 
-                {/* The Circuit Board Timeline */}
                 <div className="relative w-full max-w-7xl ml-4 md:ml-12 lg:ml-24">
 
-                    {/* Main Vertical Trunk */}
                     <div className="absolute top-0 bottom-0 left-0 w-px bg-gray-200 z-0" />
 
                     {timeline.map((item, idx) => (
@@ -71,13 +68,11 @@ export function TimelineBlock() {
                             className="relative pl-10 md:pl-20 pb-24 md:pb-40 last:pb-0 w-full flex items-start justify-between group"
                         >
 
-                            {/* The Branch Trace */}
                             <div className="absolute top-3 md:top-4 left-0 w-6 md:w-12 flex items-center z-10">
                                 <div className="h-px bg-gray-300 grow transition-colors duration-500 group-hover:bg-primary-500" />
                                 <div className="w-1.5 h-1.5 bg-primary-500 shrink-0" />
                             </div>
 
-                            {/* The Data Node (Left Side) */}
                             <div className="flex flex-col relative z-10 max-w-3xl">
                                 <Text className="text-[10px] sm:text-xs font-bold tracking-[0.3em] text-primary-500 uppercase mb-4 md:mb-6">
                                     {item.year}
@@ -95,10 +90,6 @@ export function TimelineBlock() {
                                 </Text>
                             </div>
 
-                            {/* 
-                THE GIANT WATERMARK (Right Side) 
-                Now sits beautifully against both the solid bg-gray-50 and the faint dot matrix.
-              */}
                             <div className="hidden lg:block absolute -top-8 right-0 text-[12rem] xl:text-[16rem] font-black text-gray-100 tracking-tighter leading-none pointer-events-none select-none z-0 transition-colors duration-500 group-hover:text-gray-200">
                                 {item.year}
                             </div>

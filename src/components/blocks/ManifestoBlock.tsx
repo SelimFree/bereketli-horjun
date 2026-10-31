@@ -4,6 +4,7 @@ import { FadeIn } from "../utils/FadeIn";
 import { Heading } from "../ui/Heading";
 import { Text } from "../ui/Text";
 import { Image } from "../ui/Image";
+import ManifestImg from "../../assets/about/manifest-bg.png";
 
 export function ManifestoBlock() {
   const { t } = useTranslation("about");
@@ -44,11 +45,11 @@ export function ManifestoBlock() {
           <div className="absolute top-4 -left-4 md:top-6 md:-left-6 w-full h-full border border-gray-300 pointer-events-none z-0" />
           
           <Image 
-            src="https://images.unsplash.com/photo-1541888081635-4a572a15c898?auto=format&fit=crop&q=80" 
+            src={ManifestImg} 
             alt="Infrastructure"
             aspectRatio="auto"
             containerClassName="relative z-10 w-full h-full"
-            className="grayscale contrast-125 transition-all duration-700 hover:grayscale-0 hover:contrast-100"
+            className="contrast-100"
           />
           
           <div className="absolute bottom-0 right-0 bg-gray-900 p-4 z-20">

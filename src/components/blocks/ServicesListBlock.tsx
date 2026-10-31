@@ -1,18 +1,26 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useLocation } from "react-router-dom"; // Added useLocation
+import { useLocation } from "react-router-dom";
 import { FadeIn } from "../utils/FadeIn";
 import { Heading } from "../ui/Heading";
 import { Text } from "../ui/Text";
 import { Image } from "../ui/Image";
 
+import ConstructionImg from "../../assets/services/construction.png";
+import EngineeringImg from "../../assets/services/engineering.png";
+import FibcImg from "../../assets/services/fibc.png";
+import PetrochemicalsImg from "../../assets/services/petrochemicals.png";
+import LogisticsImg from "../../assets/services/logistics.png";
+import RentalImg from "../../assets/services/rental.png";
+
+
 const services = [
-    { id: "01", key: "construction" },
-    { id: "02", key: "engineering" },
-    { id: "03", key: "fibc_production" },
-    { id: "04", key: "petrochemicals" },
-    { id: "05", key: "logistics" },
-    { id: "06", key: "equipment_rental" },
+    { id: "01", key: "construction", img: ConstructionImg },
+    { id: "02", key: "engineering", img: EngineeringImg },
+    { id: "03", key: "fibc_production", img: FibcImg },
+    { id: "04", key: "petrochemicals", img: PetrochemicalsImg },
+    { id: "05", key: "logistics", img: LogisticsImg },
+    { id: "06", key: "equipment_rental", img: RentalImg },
 ];
 
 export function ServicesListBlock() {
@@ -27,7 +35,7 @@ export function ServicesListBlock() {
                 if (el) {
                     el.scrollIntoView({ behavior: "smooth" });
                 }
-            }, 150); 
+            }, 150);
         }
     }, [location.hash]);
 
@@ -85,8 +93,8 @@ export function ServicesListBlock() {
                                 document.getElementById(`mobile-nav-${service.id}`)?.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
                             }}
                             className={`flex items-center gap-3 h-full px-4 border-b-2 transition-colors duration-300 whitespace-nowrap ${activeSection === service.id
-                                    ? "border-primary-500 text-gray-900"
-                                    : "border-transparent text-gray-400 hover:text-gray-600 hover:bg-gray-50"
+                                ? "border-primary-500 text-gray-900"
+                                : "border-transparent text-gray-400 hover:text-gray-600 hover:bg-gray-50"
                                 }`}
                         >
                             <span className={`text-[10px] font-bold tracking-[0.2em] transition-colors duration-300 ${activeSection === service.id ? "text-primary-500" : "text-gray-400"
@@ -171,11 +179,10 @@ export function ServicesListBlock() {
                                 </div>
 
                                 <Image
-                                    src={`https://images.unsplash.com/photo-${1581091226825 + index}?auto=format&fit=crop&q=80`}
+                                    src={service.img}
                                     alt={t(`ServicesListBlock.${service.key}.title`)}
-                                    aspectRatio="video"
+                                    aspectRatio="auto"
                                     containerClassName="w-full border border-gray-200 shadow-sm relative z-10"
-                                    className="grayscale hover:grayscale-0 transition-all duration-700"
                                 />
                             </FadeIn>
                         </div>

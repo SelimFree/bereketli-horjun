@@ -4,7 +4,6 @@ import { PageHeroBlock } from "../components/blocks/PageHeroBlock";
 import AboutBg from "../assets/about/about-bg.png";
 import { ManifestoBlock } from "../components/blocks/ManifestoBlock";
 import { TimelineBlock } from "../components/blocks/TimelineBlock";
-import { CertificatesBlock } from "../components/blocks/CertificatesBlock";
 
 export default function AboutPage() {
     const { t: tCommon } = useTranslation("common");
@@ -15,7 +14,6 @@ export default function AboutPage() {
             <PageHeroBlock imageSrc={AboutBg} translationKey="about" />
             <ManifestoBlock />
             <TimelineBlock />
-            <CertificatesBlock />
         </div>
     );
 }
