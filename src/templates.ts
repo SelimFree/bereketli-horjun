@@ -35,14 +35,14 @@ export const autoReplyTranslations: Record<string, AutoReplyTranslation> = {
       "Your operational parameters have been securely loged by the Bereketli Horjun team.",
     body2:
       "Our engineering and logistics divisions will review your requirements. You can expect direct communication from an authorized representative within standard 24-hour cycles.",
-    regards: "Global Dispatch",
-    contactTitle: "Primary Node",
-    linksTitle: "Capabilities",
-    legalTitle: "Technical Registry",
+    regards: "With best regards,",
+    contactTitle: "Contact Email",
+    linksTitle: "Services",
+    legalTitle: "Legal",
     links: {
       about: "About Us",
       products: "Services",
-      contact: "Initiate Connection",
+      contact: "Contact",
     },
     legal: {
       privacy: "Privacy Policy",

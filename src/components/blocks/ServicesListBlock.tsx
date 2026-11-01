@@ -11,18 +11,22 @@ import EngineeringImg from "../../assets/services/engineering.png";
 import FibcImg from "../../assets/services/fibc.png";
 import PetrochemicalsImg from "../../assets/services/petrochemicals.png";
 import LogisticsImg from "../../assets/services/logistics.png";
-import RentalImg from "../../assets/services/rental.png";
+import Rental1Img from "../../assets/services/rental-1.png";
+import Rental2Img from "../../assets/services/rental-2.png";
+import Rental3Img from "../../assets/services/rental-3.png";
+import Rental4Img from "../../assets/services/rental-4.png";
+import Rental5Img from "../../assets/services/rental-5.png";
+import Rental6Img from "../../assets/services/rental-6.png";
 
 
 const services = [
-    { id: "01", key: "construction", img: ConstructionImg },
-    { id: "02", key: "engineering", img: EngineeringImg },
-    { id: "03", key: "fibc_production", img: FibcImg },
-    { id: "04", key: "petrochemicals", img: PetrochemicalsImg },
-    { id: "05", key: "logistics", img: LogisticsImg },
-    { id: "06", key: "equipment_rental", img: RentalImg },
+    { id: "01", key: "construction", images: [ConstructionImg] },
+    { id: "02", key: "engineering", images: [EngineeringImg] },
+    { id: "03", key: "fibc_production", images: [FibcImg] },
+    { id: "04", key: "petrochemicals", images: [PetrochemicalsImg] },
+    { id: "05", key: "logistics", images: [LogisticsImg] },
+    { id: "06", key: "equipment_rental", images: [Rental1Img, Rental2Img, Rental3Img, Rental4Img, Rental5Img, Rental6Img] },
 ];
-
 export function ServicesListBlock() {
     const { t } = useTranslation("services");
     const location = useLocation();
@@ -165,7 +169,7 @@ export function ServicesListBlock() {
                                     {t(`ServicesListBlock.${service.key}.description`)}
                                 </Text>
 
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-gray-200 border border-gray-200 mb-10 lg:mb-12 shadow-sm">
+                                {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-gray-200 border border-gray-200 mb-10 lg:mb-12 shadow-sm">
                                     {[1, 2, 3, 4].map((specNum) => (
                                         <div key={specNum} className="bg-white p-5 lg:p-6 flex flex-col relative z-10">
                                             <Text className="text-[10px] font-bold tracking-[0.2em] text-gray-400 uppercase mb-2">
@@ -176,14 +180,36 @@ export function ServicesListBlock() {
                                             </Text>
                                         </div>
                                     ))}
-                                </div>
+                                </div> */}
 
-                                <Image
-                                    src={service.img}
-                                    alt={t(`ServicesListBlock.${service.key}.title`)}
-                                    aspectRatio="auto"
-                                    containerClassName="w-full border border-gray-200 shadow-sm relative z-10"
-                                />
+                                {service.images.length === 1 ? (
+                                    <Image
+                                        src={service.images[0]}
+                                        alt={t(`ServicesListBlock.${service.key}.title`)}
+                                        aspectRatio="auto"
+                                        containerClassName="w-full border border-gray-200 shadow-sm relative z-10"
+                                    />
+                                ) : (
+                                    <div className="flex lg:grid lg:grid-cols-2 gap-4 lg:gap-6 overflow-x-auto snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] scrollbar-none -mx-4 px-4 md:-mx-8 md:px-8 lg:mx-0 lg:px-0">
+                                        {service.images.map((imgSrc, imgIdx) => (
+                                            <div
+                                                key={imgIdx}
+                                                className={`snap-center shrink-0 w-[85%] sm:w-[60%] lg:w-full ${service.images.length % 2 !== 0 && imgIdx === service.images.length - 1
+                                                        ? "lg:col-span-2"
+                                                        : ""
+                                                    }`}
+                                            >
+                                                <Image
+                                                    src={imgSrc}
+                                                    alt={`${t(`ServicesListBlock.${service.key}.title`)} - ${imgIdx + 1}`}
+                                                    aspectRatio="auto"
+                                                    containerClassName="w-full h-full border border-gray-200 shadow-sm relative z-10"
+                                                    className="object-cover w-full h-full"
+                                                />
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
                             </FadeIn>
                         </div>
                     ))}
