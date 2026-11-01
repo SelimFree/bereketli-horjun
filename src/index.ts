@@ -7,6 +7,7 @@ import {
 export interface Env {
   RESEND_API_KEY: string;
   RESEND_OWNER_EMAIL: string;
+  TURNSTILE_SECRET_KEY: string;
   ASSETS: any;
 }
 
@@ -17,6 +18,7 @@ interface InquiryPayload {
   email: string;
   message: string;
   user_lang: string;
+  captchaToken: string;
 }
 
 const corsHeaders = {
@@ -28,6 +30,7 @@ const corsHeaders = {
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
+
 
     if (request.method === "OPTIONS") {
       return new Response(null, { headers: corsHeaders });
@@ -43,7 +46,31 @@ export default {
           email,
           message,
           user_lang,
+          captchaToken
         } = body;
+
+        if (!captchaToken) {
+          return new Response(JSON.stringify({ success: false, error: "Missing security token." }), {
+            status: 400,
+            headers: { "Content-Type": "application/json", ...corsHeaders },
+          });
+        }
+
+
+        const turnstileVerify = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: `secret=${env.TURNSTILE_SECRET_KEY}&response=${captchaToken}`,
+        });
+
+        const turnstileResult = (await turnstileVerify.json()) as { success: boolean };
+
+        if (!turnstileResult.success) {
+          return new Response(JSON.stringify({ success: false, error: "Security clearance failed." }), {
+            status: 403,
+            headers: { "Content-Type": "application/json", ...corsHeaders },
+          });
+        }
 
         const resendHeaders = {
           "Content-Type": "application/json",

@@ -12,9 +12,13 @@ import { Input } from "../ui/Input";
 import { Label } from "../ui/Label";
 import { Textarea } from "../ui/Textarea";
 import { Button } from "../ui/Button";
+import { Turnstile } from "@marsidev/react-turnstile";
+import type { TurnstileInstance } from "@marsidev/react-turnstile";
 
 export function ContactBlock() {
     const { t, i18n } = useTranslation("contact");
+    const [turnstileToken, setTurnstileToken] = useState<string>("");
+    const turnstileRef = useRef<TurnstileInstance>(null);
 
     const formRef = useRef<HTMLFormElement>(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -23,8 +27,14 @@ export function ContactBlock() {
 
     const handleSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
         e.preventDefault();
+
         setError(null);
         if (!formRef.current) return;
+
+        if (!turnstileToken) {
+            alert("Security check pending. Please wait a moment.");
+            return;
+        }
 
         setIsSubmitting(true);
 
@@ -33,7 +43,8 @@ export function ContactBlock() {
 
         const payload = {
             ...data,
-            user_lang: (i18n.language || "en").split('-')[0]
+            user_lang: (i18n.language || "en").split('-')[0],
+            captchaToken: turnstileToken
         };
 
         try {
@@ -46,13 +57,16 @@ export function ContactBlock() {
             const result = await response.json();
 
             if (!response.ok || !result.success) {
+                turnstileRef.current?.reset();
                 throw new Error(result.error || "Failed to send message");
             }
 
             setIsSubmitted(true);
+            turnstileRef.current?.reset();
             formRef.current.reset();
         } catch (err) {
             console.error(err);
+            turnstileRef.current?.reset();
             setError("ContactBlock.errorMessage");
         } finally {
             setIsSubmitting(false);
@@ -224,6 +238,15 @@ export function ContactBlock() {
                                                 </button>
                                             </div>
                                         )}
+
+                                        <Turnstile
+                                            ref={turnstileRef}
+                                            siteKey="0x4AAAAAAFvebx3x9zjgMVpc"
+                                            onSuccess={(token) => setTurnstileToken(token)}
+                                            options={{
+                                                theme: "dark",
+                                            }}
+                                        />
 
                                         <Button
                                             type="submit"
